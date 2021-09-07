@@ -1,0 +1,14 @@
+worlds:
+  world1:
+    music: "custom.music"
+    volume: 100.0
+    pitch: 1.0
+    duration: 999
+  world2:
+    music: "custom.music.2"
+    volume: 100.0
+    pitch: 1.0
+    duration: 999
+
+enableException: false
+exceptionPermission: "music.bypass"

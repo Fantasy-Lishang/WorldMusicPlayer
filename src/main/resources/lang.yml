@@ -1,0 +1,6 @@
+prefix: "[MUSIC PLAYER]"
+music-stopped: "music stopped for player {0}"
+notify-player-stopped: "your last music has been stopped"
+no-music-playing: "player {0} has no music to stop"
+playing: "Playing music {0} for player {1}"
+music-not-found: "music not found for world {0}"

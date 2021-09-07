@@ -1,0 +1,7 @@
+name: WorldMusicPlayer
+version: '${project.version}'
+main: com.ericlam.mc.worldmusicplayer.WorldMusicPlayer
+api-version: 1.16
+load: STARTUP
+depend: [ ELDependenci ]
+authors: [ EricLam ]
