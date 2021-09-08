@@ -5,6 +5,7 @@ import com.ericlam.mc.eld.registrations.ComponentsRegistry;
 import com.ericlam.mc.eld.registrations.ListenerRegistry;
 import com.ericlam.mc.worldmusicplayer.commmand.MusicPlayerCommand;
 import com.ericlam.mc.worldmusicplayer.commmand.MusicPlayerPlayCommand;
+import com.ericlam.mc.worldmusicplayer.commmand.MusicPlayerReloadCommand;
 import com.ericlam.mc.worldmusicplayer.commmand.MusicPlayerStopCommand;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public class WorldMusicPlayerRegistry implements ComponentsRegistry {
             c.command(MusicPlayerPlayCommand.class);
 
             c.command(MusicPlayerStopCommand.class);
+
+            c.command(MusicPlayerReloadCommand.class);
 
         });
     }

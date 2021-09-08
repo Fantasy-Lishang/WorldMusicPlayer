@@ -28,7 +28,7 @@ public class WorldMusicListener implements ELDListener {
     private <E extends PlayerEvent> void handle(EventListeners.EventSubscriber<E> subscriber) {
         subscriber
                 .filter(e -> config.worlds.containsKey(e.getPlayer().getWorld().getName()))
-                .filter(e -> config.enableException && !e.getPlayer().hasPermission(config.exceptionPermission))
+                .filter(e -> !config.enableException || e.getPlayer().hasPermission(config.exceptionPermission))
                 .handle(e -> {
                     Player player = e.getPlayer();
                     String world = player.getWorld().getName();

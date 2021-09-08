@@ -15,8 +15,8 @@ public class MusicConfig extends Configuration {
     public static class WorldMusic {
 
         public String music;
-        public float volume;
-        public float pitch;
+        public double volume;
+        public double pitch;
         public long duration;
 
     }

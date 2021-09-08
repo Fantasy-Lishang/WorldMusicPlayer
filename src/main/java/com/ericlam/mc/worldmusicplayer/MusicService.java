@@ -2,10 +2,12 @@ package com.ericlam.mc.worldmusicplayer;
 
 import com.ericlam.mc.worldmusicplayer.configuration.MusicConfig;
 import com.ericlam.mc.worldmusicplayer.configuration.MusicLang;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import javax.inject.Inject;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -23,7 +25,8 @@ public final class MusicService {
         MusicRunnable runnable = new MusicRunnable(player, music);
         stopMusic(player);
         this.musicRunner.put(player, runnable);
-        runnable.runTaskTimer(plugin, 0L, duration);
+        runnable.runTaskTimer(plugin, 0L, duration * 20L);
+        plugin.getSLF4JLogger().info("playing music {} for {} in world {}", music.music, player.getName(), player.getWorld().getName());
     }
 
 
@@ -50,7 +53,7 @@ public final class MusicService {
 
         @Override
         public void run() {
-            player.playSound(player.getLocation(), music.music, music.volume, music.pitch);
+            player.playSound(player.getLocation(), music.music, (float) music.volume, (float) music.pitch);
         }
 
 
